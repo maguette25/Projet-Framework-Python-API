@@ -1,0 +1,50 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Etudiants</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</head>
+<body>
+    <header class="navbar">
+        <h1>Gestion des Étudiants</h1>
+    <nav>
+        <button class="btn import">Import JSON</button>
+        <button class="btn add">Ajouter Étudiant</button>
+    </nav>
+    </header>
+
+    <section class="filters">
+        <input type="text" placeholder="Recherche...">
+        <select><option>Classe</option></select>
+        <select><option>Source</option></select>
+        <select><option>Validité</option></select>
+        <button class="btn filter">Filtrer</button>
+    </section>
+
+    <section class="table-section">
+        <h2>Liste des Étudiants</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Numéro</th><th>Nom</th><th>Prénom</th><th>Classe</th>
+                    <th>Moy. Gén.</th><th>Source</th><th>Validité</th><th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable">
+                <!-- Les lignes seront générées en JS -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer class="stats">
+        <div class="card">Total Étudiants: <span id="total">124</span></div>
+        <div class="card">Étudiants Invalides: <canvas id="chart"></canvas></div>
+        <div class="card">Top Moyennes:
+        <ul id="topList"></ul>
+        </div>
+    </footer>
+</body>
+</html>

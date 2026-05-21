@@ -1,0 +1,83 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #1e3a8a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #e2e8f0; /* gris clair */
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem auto;
+  width: 90%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filters input[type="text"],
+.filters select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.filters input[type="text"]:focus,
+.filters select:focus {
+  border-color: #2563eb; /* bleu accent */
+  outline: none;
+}
+
+.filters .btn.filter {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filters .btn.filter:hover {
+  background-color: #1e40af;
+}
+
+.btn.import { background-color: #16a34a; color: white; }
+.btn.add { background-color: #f97316; color: white; }
+.btn.filter { background-color: #2563eb; color: white; }
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+tr:nth-child(even) { background-color: #f9fafb; }
+tr.invalid { background-color: #fee2e2; }
